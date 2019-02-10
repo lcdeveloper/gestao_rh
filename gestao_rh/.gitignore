@@ -1,0 +1,4 @@
+.idea
+.svn
+*.sqlite3
+venv
