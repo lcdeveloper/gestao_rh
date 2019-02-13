@@ -8,13 +8,14 @@
 
         <div class="col-sm">
             Olá usuário {{ usuario.funcionario.nome }}
+            <a href="{% url 'list_funcionario' %}"> Gerenciar Funcionário</a>
         </div>
 
          <div class="col-sm">
              <a href="{% url 'logout' %}">Logout</a>
 
              {% if usuario.funcionario.empresa %}
-                <a href="">Editar Empresa</a>
+                <a href="{% url 'edit_empresa' usuario.funcionario.empresa.id %}">Editar Empresa</a>
              {% else %}
                 <a href="{% url 'create_empresa' %}"> Criar Empresa</a>
              {% endif %}
