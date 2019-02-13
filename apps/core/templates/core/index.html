@@ -7,11 +7,17 @@
         </div>
 
         <div class="col-sm">
-            on of  three columns
+            Olá usuário {{ usuario.funcionario.nome }}
         </div>
 
          <div class="col-sm">
              <a href="{% url 'logout' %}">Logout</a>
+
+             {% if usuario.funcionario.empresa %}
+                <a href="">Editar Empresa</a>
+             {% else %}
+                <a href="{% url 'create_empresa' %}"> Criar Empresa</a>
+             {% endif %}
         </div>
 
     </div>
